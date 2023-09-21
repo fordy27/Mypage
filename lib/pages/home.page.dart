@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ford/pages/column.page.dart';
 import 'package:ford/pages/container.page.dart';
+import 'package:ford/pages/myData.page.dart';
 import 'package:ford/pages/row.page.dart';
 import 'package:ford/pages/text.page.dart';
 
@@ -76,6 +77,22 @@ class HomePage extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(12),
                 child: Text('4.) Row'),
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyData(),
+                ),
+              );
+            },
+            child: const Card(
+              child: Padding(
+                padding: EdgeInsets.all(12),
+                child: Text('5.) My Data'),
               ),
             ),
           ),
